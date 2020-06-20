@@ -5,10 +5,10 @@ var slideIndex = 0;
 function showSlides() {
     var i;
     // Phương thức trả về tập hợp các phần tử 
+    //Lấy ra các element có className = mySlide
     var slides = document.getElementsByClassName("mySlides");
-    //gan slide bang class "mySlides"
-    var dots = document.getElementsByClassName("dot");
-    //gan dots bang class dot
+
+    //An het cac anh
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
