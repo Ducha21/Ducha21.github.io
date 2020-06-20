@@ -116,26 +116,26 @@ function slide(){
 
 function btnClick(){
 		$('#id-a1').click(function(){
-			$('#id-layer-img1').attr("src","image/k1.png");
+			$('#id-layer-img1').attr("src","./image/k1.png");
 			x=2;
 		})
 		
 		$('#id-a2').click(function(){
-			$('#id-layer-img1').attr("src","image/k2.png");
+			$('#id-layer-img1').attr("src","./image/k2.png");
 			x=3;
 		})
 		$('#id-a3').click(function(){
-			$('#id-layer-img1').attr("src","image/k3.png");
+			$('#id-layer-img1').attr("src","./image/k3.png");
 			x=4;
 		})
 		$('#id-a4').click(function(){
-			$('#id-layer-img1').attr("src","image/k4.png");
+			$('#id-layer-img1').attr("src","./image/k4.png");
 			x=1;
 		})
 }
 function tuvan(){
 	$('#id-tuvan').toggle();
-	setTimeout("tuvan()",8000);
+	setTimeout("tuvan()",5000);
 	
 }
 
