@@ -77,7 +77,12 @@
                 if (userName === '') {
                     alert("Không được để trống tên tài khoản.");
                     return;
-                } else if (password !== reenterPassword) {
+                }else if(userName.length < 5)
+                {
+                    alert("Tài khoản phải ít nhất 5 ký tự trở nên !");
+                    return;
+                } 
+                else if (password !== reenterPassword) {
                     alert("Mật khẩu không trùng nhau!");
                     return;
                 } else if (password === "") {
