@@ -48,7 +48,7 @@
 			<input class="thanh-tim-kiem" type="text"  placeholder="Tìm kiếm...">
 			<img class="timkiem" src="./image/anhweb/44.png">
 		</div>
-		<div class="dangnhap"><a href="dangky.html">Đăng Ký</a> /</div>
+		<div class="dangnhap"><a href="dangky.html">Đăng nhập</a> /</div>
 		<div class="dangnhap"><a href="#">Đăng ký</a></div>
 	</div>
 	<div class="tim-cua-hang">
@@ -56,36 +56,45 @@
 	</div>
 	<form action="#">
 		<div class="bao"><div class="logo1"><img class="logo-img" src="./image/anhweb/1.3.png"></div></div>
-		<h2>Đăng Ký</h2>
+		<h2>Đăng Nhập</h2>
 		<input id="id-userName" class="f-input" type="text" placeholder="Username" value="NguyenVanThai">
-        <input id="id-password" class="f-input" type="password" placeholder="Password" value="HaQuyDuc">
-        <input id="id-reenterPassword" class="f-input" type="password" placeholder="Reenter Password" value="HaQuyDuc">
-		<button id="id-dangky" class="btn-dangnhap" type="submit"><a id="id-trangchu" >Đăng Ký</a></button>
+		<input id="id-password" class="f-input" type="password" placeholder="Password" value="HaQuyDuc">
+		<div class="nho">
+			<div id="id-switch" class="switch">
+				<div id="id-rememberPass" class="click1"></div>
+				<div id="id-dontRememberPass" class="click2"></div>
+			</div>
+			<div class="rmb">Nhớ mật khẩu</div>
+		</div>
+		<button id="id-dangnhap" class="btn-dangnhap" type="submit"><a id="id-trangchu" href="trangchu.html">Đăng Nhập</a></button>
+		<div class="dangky1">Bạn chưa có tài khoản <a href="dangky2.html">Đăng Ký</a></div>
 		
 	</form>
 	<script type="text/javascript">
 		$(document).ready(function(){
-
-			$('#id-dangky').click(()=>{
-				var userName = $('#id-userName').val();
-                var password = $('#id-password').val();
-                var reenterPassword = $('#id-reenterPassword').val();
-                if(userName===''){
-                    alert("Không được để trống tên tài khoản.");
-                    return;
-                }
-                else if(password!==reenterPassword)
-               {
-                   alert("Mật khẩu không trùng nhau!");
-                   return;
-               }
-               else
-               {
-                   alert("Đăng ký thành công!");
-                $(location).attr("href","dangnhap.html");
-               }
+			$('#id-rememberPass').click(()=>{
+				$('#id-rememberPass').hide();
+				$('#id-dontRememberPass').show();
+				$('#id-switch').css("background-color","#ecdd55e8");
 			});
-		});
+			$('#id-dontRememberPass').click(()=>{
+				$('#id-dontRememberPass').hide();
+				$('#id-rememberPass').show();
+				$('#id-switch').css("background-color","#c6c6c6");
+			});
+
+
+			$('#id-dangnhap').click(()=>{
+				
+				if($('#id-userName').val()==='NguyenVanThai' && $('#id-password').val()==='HaQuyDuc'){
+					$(location).attr("href","trangchu.html");
+				}
+				else{
+					$('#id-trangchu').attr("href","#");
+					alert('tài khoản hoặc mật khẩu không chính xác');
+				}
+			})
+		})
 	</script>
 	<div class="foot">
 		<div class="footer">
