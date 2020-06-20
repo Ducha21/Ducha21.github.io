@@ -23,7 +23,7 @@ function showSlides() {
 
     // Change image every x seconds
     //CÀI DAT THỜI GIAN HIỂN THị img tiep theo
-    setTimeout(showSlides, 6000);
+    setTimeout(showSlides, 2000);
 
 }
 
